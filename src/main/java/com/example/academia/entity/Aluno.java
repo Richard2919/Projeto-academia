@@ -26,6 +26,9 @@ public class Aluno{
     @Column(name = "data_cadastro", nullable = false, updatable = false)
     private LocalDate dataCadastro;
 
+    @Column(name = "data_vencimento", nullable = false)
+    private LocalDate dataVencimento;
+
     //usado para que: garante que será definido no momento da persistência.
     @PrePersist
     public void prePersist(){
@@ -50,7 +53,7 @@ public class Aluno{
     public Aluno(){
     }
 
-    public Aluno(Long id, String nome, String cpf, LocalDate dataNascimento, String telefone, Double peso, Double altura, Boolean mensalidadeEmdia) {
+    public Aluno(Long id, String nome, String cpf, LocalDate dataNascimento, String telefone, Double peso, Double altura, Boolean mensalidadeEmdia, LocalDate dataVencimento) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
@@ -59,6 +62,7 @@ public class Aluno{
         this.peso = peso;
         this.altura = altura;
         this.mensalidadeEmdia = mensalidadeEmdia;
+        this.dataVencimento = dataVencimento;
     }
 
     public Long getId() {
@@ -139,5 +143,13 @@ public class Aluno{
 
     public void setFichas(List<Ficha> fichas) {
         this.fichas = fichas;
+    }
+
+    public LocalDate getDataVencimento() {
+        return dataVencimento;
+    }
+
+    public void setDataVencimento(LocalDate dataVencimento) {
+        this.dataVencimento = dataVencimento;
     }
 }
