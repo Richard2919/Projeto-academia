@@ -1,0 +1,6 @@
+O Garçom (A Camada Controller)
+O Controller é a porta de entrada do seu sistema. Ele é o garçom do restaurante.
+
+O que ele faz: Ele recebe o pedido do cliente (a requisição HTTP do Postman ou do celular), anota o que o cliente quer (ex: GET /api/fichas/aluno/1) e leva o pedido para a cozinha. Quando a comida fica pronta, ele é quem entrega o prato final (o JSON) na mesa.
+
+O que ele NÃO faz: O garçom não cozinha. Um Controller nunca deve ter regras de negócio (cálculos matemáticos, validações complexas) nem acessar o banco de dados diretamente.

@@ -1,0 +1,5 @@
+O Ingrediente / O Prato (A Camada Entity)
+A Entidade não é uma "camada de ação", ela é o dado em si. É a receita ou o ingrediente.
+
+O que ele faz: É a representação exata de uma tabela do seu banco de dados transformada em um objeto Java.
+O estoquista (Repository) pega esse ingrediente, o Chef (Service) tempera (altera os dados) e o garçom (Controller) entrega.

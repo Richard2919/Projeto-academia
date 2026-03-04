@@ -1,0 +1,6 @@
+A Despensa / O Estoquista (A Camada Repository)
+O Repository é o cara que busca os ingredientes crus no estoque.
+
+O que ele faz: Ele é a única camada autorizada a conversar com o Banco de Dados (fazer os SELECT, INSERT, UPDATE). O Chef (Service) grita: "Preciso do Aluno de ID 1!", e o Repository vai lá na prateleira do banco H2, pega os dados e entrega para o Chef.
+
+O segredo do Spring: Graças ao JpaRepository, você não precisa escrever os códigos SQL na mão, o framework já cria o estoquista pronto para você.

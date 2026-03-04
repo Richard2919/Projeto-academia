@@ -1,0 +1,6 @@
+O Cozinheiro / O Chef (A Camada Service)
+O Service é o cérebro do seu sistema. Ele é o Chef de Cozinha.
+
+O que ele faz: É aqui que mora a Regra de Negócio. O garçom entrega o pedido para ele, e ele decide como preparar. Ele verifica se o aluno está com a mensalidade em dia, calcula os 30 dias de vencimento (como fizemos no @Scheduled), e aplica multas.
+
+Por que é importante? Porque se amanhã a regra da academia mudar, você só altera o código do cozinheiro, sem precisar mexer no garçom ou na despensa.
