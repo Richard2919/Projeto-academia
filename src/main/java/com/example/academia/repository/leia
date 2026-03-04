@@ -1,0 +1,17 @@
+Porque usei JpaRepository, você não precisa escrever o código para:
+
+Salvar: repository.save(objeto);
+
+Deletar: repository.deleteById(id);
+
+Listar: repository.findAll();
+
+Usado Interfece em vez de Class pq teria que implementar manualmente:
+
+ EntityManager
+ Query
+ Persist
+ Merge
+ Remove
+ Paginação
+ Tratamento de transação
