@@ -28,6 +28,8 @@ public class FinanceiroController {
         Aluno aluno = alunoService.buscaPorId(id)
                 .orElseThrow(() -> new RuntimeException("Aluno não encontrado"));
         aluno.setMensalidadeEmdia(true);
+        //usa o robo do spring para "calcular" 1 mes exato apos confirmar o pagamento
+        aluno.setDataVencimento(java.time.LocalDate.now().plusMonths(1));
         return alunoService.salvar(aluno);
     }
 }

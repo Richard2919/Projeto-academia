@@ -19,13 +19,13 @@ public class AdminController {
     private ExercicioService exercicioService;
 
     // O Professor usa isso para confirmar que o aluno pagou
-    @PatchMapping("/alunos/{id}/pagamento")
+  /* @PatchMapping("/alunos/{id}/pagamento")
     public ResponseEntity<Void> atualizarPagamento(@PathVariable Long id, @RequestParam Boolean status) {
         Aluno aluno = alunoService.buscaPorId(id).orElseThrow();
         aluno.setMensalidadeEmdia(status);
         alunoService.salvar(aluno);
         return ResponseEntity.ok().build();
-    }
+    } */
 
     // O Professor usa isso para adicionar exercícios novos ao catálogo
     @PostMapping("/exercicios")
